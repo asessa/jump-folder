@@ -134,7 +134,7 @@ func main() {
 		fmt.Println(`function jump {
 if [ $# -lt 1 ]; then
 	jump-folder
-elif [ ${1:0:1} == "-" ]; then
+elif [[ $1 == "-"* ]]; then
 	jump-folder $*
 else
 	cd $(jump-folder $*)
